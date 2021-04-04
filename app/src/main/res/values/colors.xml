@@ -10,4 +10,6 @@
     <color name="light_blue">#add8e6</color>
     <color name="orange">#FFA500</color>
     <color name="dark_blue">#000080</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="dark_green">#006400</color>
 </resources>

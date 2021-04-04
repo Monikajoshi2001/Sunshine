@@ -6,54 +6,106 @@
     android:layout_height="match_parent"
     android:background="@color/light_blue"
     tools:context=".MainActivity">
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/weather_info"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="10dp"
-        android:background="@color/dark_blue">
+        android:background="@color/teal_200">
 
         <ImageView
             android:id="@+id/weather_icon"
             android:padding="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/img"
             android:src="@drawable/finding" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city_name"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:text=".."
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
 
-    </FrameLayout>
-    <LinearLayout
+    </RelativeLayout>
+    <RelativeLayout
         android:id="@+id/weather_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:layout_above="@+id/find">
+
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/temp1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/temprature"
-            android:textSize="50sp"
-            android:text="0*C"
+            android:textSize="20sp"
+            android:text="Temprature :"
             android:textColor="@color/dark_blue"
             android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/temprature"
+            android:textSize="20sp"
+            android:text="0*C"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/temp1"/>
+        <TextView
+            android:id="@+id/temp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Feels Like :"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:layout_below="@id/temp1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/feels_temprature"
+            android:textSize="20sp"
+            android:text="0*C"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:layout_below="@id/temprature"
+            android:layout_toRightOf="@id/temp2"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/weather_condition"
-            android:textSize="50sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/dark_blue"
-            android:text="-------"/>
+            android:text="-------"
+            android:layout_below="@+id/temp2"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/city_name"
-            android:textSize="50sp"
+            android:id="@+id/humidity1"
+            android:text="Humidity :"
+            android:layout_below="@id/weather_condition"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/dark_blue"
-            android:text="abc"/>
-    </LinearLayout>
+            android:textColor="@color/dark_blue"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humidity2"
+            android:text="**"
+            android:layout_toRightOf="@id/humidity1"
+            android:layout_below="@id/weather_condition"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"/>
+
+    </RelativeLayout>
 
 
     <Button
